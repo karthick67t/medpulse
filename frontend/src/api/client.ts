@@ -16,7 +16,7 @@ import {
   SmartOutreachSummary
 } from '../types';
 
-const API_BASE = '/api/v1';
+const API_BASE ='https://medpulse-api-uk68.onrender.com/api/v1';;
 
 const httpClient = axios.create({
   baseURL: API_BASE,
