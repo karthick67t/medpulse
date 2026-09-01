@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: #172018;
+    background-color: #F8FAFC;
+  }
+}
+
+/* White & Green Healthcare Custom Utilities */
+.bg-mint {
+  background-color: #F0FDF4;
+}
+
+.text-primary-green {
+  color: #16A34A;
+}
+
+.bg-primary-green {
+  background-color: #16A34A;
+}
+
+.border-primary-green {
+  border-color: #16A34A;
+}
+
+.bg-light-green {
+  background-color: #DCFCE7;
+}
+
+.text-dark-green {
+  color: #166534;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Animations */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
