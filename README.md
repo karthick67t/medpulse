@@ -1,74 +1,73 @@
-Medpulse — Explainable Patient Follow-up Risk & Intervention Platform
+# 🩺 MedPulse Healthcare Platform
+
+### Explainable Patient Follow-up Risk & Intervention Platform
 
 > **Predict risk. Understand why. Act earlier.**
 
-CareTrack AI is a full-stack healthcare decision-support application built for hospitals to identify, rank, explain, and prioritize patient follow-up outreach before patients miss critical appointments.
+MedPulse is a full-stack healthcare decision-support platform designed to help hospitals identify patients who are at risk of missing critical follow-up appointments.
+
+The platform combines an **explainable weighted risk engine**, patient analytics, intervention recommendations, and a priority-based outreach workflow so that care teams can focus their attention on patients who need it most.
 
 ---
 
-## Key Features
+## 🎯 Problem Statement
 
-1. **Transparent Weighted Risk Engine**:
-   - Scores patient follow-up risk from **0 to 100**.
-   - Categorizes risk into **LOW (0-29)**, **MEDIUM (30-59)**, and **HIGH (60-100)**.
-   - Evaluates 6 weighted parameters: Missed appointments, Attendance history, Distance to hospital, Treatment duration, Appointment frequency, and Age.
-   - **Mathematically Traceable**: Every displayed score is directly equal to the sum of its contributing factor scores.
+Hospitals often manage thousands of patients requiring regular follow-ups.
 
-2. **Explainability Engine**:
-   - Generates granular factor breakdown cards with point impact, severity rating, and human-readable reasons strictly derived from scoring inputs.
+However, identifying which patients are most likely to miss their next appointment can be difficult when relying on manual tracking alone.
 
-3. **Recommendation & Workflow Engine**:
-   - Converts risk factors into actionable clinical workflow suggestions (e.g. personal phone outreach, checking transport barriers, teleconsultation eligibility).
+MedPulse addresses this problem by:
 
-4. **Priority Intervention Queue & Management**:
-   - Ranks all patients by risk score descending.
-   - Enables care teams to assign, start, complete, and track follow-up outreach tasks.
-
-5. **Interactive Risk Simulator**:
-   - Live sliders for what-if scenario testing (e.g. changing appointment frequency or distance to visualize instant score impact).
-
-6. **Hospital Analytics & Trends**:
-   - Interactive charts built with Recharts visualizing department distributions, distance vs. risk scatter plots, and missed visit trends.
-
-7. **1,000 Synthetic Patient Dataset & Predefined Demo Patients**:
-   - `P1024`: Demo Patient A (High Risk ~92 - Eleanor Vance)
-   - `P1092`: Demo Patient B (High Risk ~78 - Marcus Thorne)
-   - `P1134`: Demo Patient C (Medium Risk ~47 - Clara Oswald)
-   - `P1201`: Demo Patient D (Low Risk ~0 - David Tennant)
-
-8. **Role-Based Access & Demo Controls**:
-   - Roles: Admin, Doctor, Nurse, Reception.
-   - Quick Demo Login: `admin@caretrack.ai` / `demo123`.
+- Identifying patients with elevated follow-up risk
+- Ranking patients according to their risk score
+- Explaining exactly why a patient received their score
+- Recommending appropriate follow-up interventions
+- Providing an intervention queue for care teams
+- Allowing healthcare teams to simulate "what-if" scenarios
+- Visualizing hospital-level risk trends and patterns
 
 ---
 
-## Tech Stack
+# 🚀 Key Features
 
-- **Backend**: Python 3.12, FastAPI, SQLAlchemy, Pydantic, SQLite
-- **Frontend**: React 18, TypeScript, Vite, Tailwind CSS v4, Recharts, Lucide React, Axios, React Router v6
+## 1. 🧮 Explainable Weighted Risk Engine
 
----
+MedPulse calculates a patient follow-up risk score from:
 
-## Running the Application
+**0 – 100**
 
-### 1. Backend Server (FastAPI)
-```bash
-cd caretrack-ai/backend
-python -m pip install -r requirements.txt
-python -m uvicorn app.main:app --reload --port 8000
-```
-- API Documentation (Swagger): `http://localhost:8000/docs`
+### Risk Categories
 
-### 2. Frontend Development Server (React Vite)
-```bash
-cd caretrack-ai/frontend
-npm install
-npm run dev
-```
-- Web Application: `http://localhost:5173`
+| Score | Risk Level |
+|------:|------------|
+| 0 – 29 | 🟢 LOW |
+| 30 – 59 | 🟡 MEDIUM |
+| 60 – 100 | 🔴 HIGH |
 
----
+The engine evaluates six measurable parameters:
 
-## Healthcare Decision-Support Disclaimer
+1. Missed appointments
+2. Attendance history
+3. Distance from hospital
+4. Treatment duration
+5. Appointment frequency
+6. Patient age
 
-CareTrack AI is a decision-support prototype designed to help prioritize follow-up outreach. It does not diagnose disease, determine treatment, or replace clinical judgment.
+### Mathematical Traceability
+
+Every displayed risk score is directly derived from its contributing factors.
+
+```text
+Total Risk Score
+=
+Missed Appointment Score
++
+Attendance Score
++
+Distance Score
++
+Treatment Duration Score
++
+Appointment Frequency Score
++
+Age Score
