@@ -1,4 +1,4 @@
-# CareTrack AI — Explainable Patient Follow-up Risk & Intervention Platform
+Medpulse — Explainable Patient Follow-up Risk & Intervention Platform
 
 > **Predict risk. Understand why. Act earlier.**
 
