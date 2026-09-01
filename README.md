@@ -1,73 +1,59 @@
-# 🩺 MedPulse Healthcare Platform
+# 🩺 MedPulse
 
-### Explainable Patient Follow-up Risk & Intervention Platform
+## Explainable Patient Follow-up Risk & Intervention Platform
 
 > **Predict risk. Understand why. Act earlier.**
 
-MedPulse is a full-stack healthcare decision-support platform designed to help hospitals identify patients who are at risk of missing critical follow-up appointments.
+MedPulse is a full-stack healthcare decision-support platform designed to help hospitals and care teams identify patients who may be at risk of missing important follow-up appointments.
 
-The platform combines an **explainable weighted risk engine**, patient analytics, intervention recommendations, and a priority-based outreach workflow so that care teams can focus their attention on patients who need it most.
+The platform combines an explainable risk scoring engine, patient management, intervention workflows, analytics, role-based access, and a modern healthcare dashboard into a single application.
 
----
-
-## 🎯 Problem Statement
-
-Hospitals often manage thousands of patients requiring regular follow-ups.
-
-However, identifying which patients are most likely to miss their next appointment can be difficult when relying on manual tracking alone.
-
-MedPulse addresses this problem by:
-
-- Identifying patients with elevated follow-up risk
-- Ranking patients according to their risk score
-- Explaining exactly why a patient received their score
-- Recommending appropriate follow-up interventions
-- Providing an intervention queue for care teams
-- Allowing healthcare teams to simulate "what-if" scenarios
-- Visualizing hospital-level risk trends and patterns
+Instead of waiting for a patient to miss an appointment, MedPulse helps care teams identify potentially high-risk patients early, understand the factors contributing to their risk, prioritize outreach, and track intervention activities.
 
 ---
 
-# 🚀 Key Features
+## 🌟 Project Overview
 
-## 1. 🧮 Explainable Weighted Risk Engine
+Healthcare organizations may manage thousands of patients requiring regular follow-up.
 
-MedPulse calculates a patient follow-up risk score from:
+A patient may miss a follow-up appointment because of factors such as:
 
-**0 – 100**
+- Previous missed appointments
+- Poor attendance history
+- Long distance from the hospital
+- Long treatment duration
+- High appointment frequency
+- Age-related barriers
+- Transportation difficulties
+- Difficulty maintaining regular hospital visits
 
-### Risk Categories
+When these factors are distributed across patient records, it becomes difficult for healthcare teams to quickly determine:
 
-| Score | Risk Level |
-|------:|------------|
-| 0 – 29 | 🟢 LOW |
-| 30 – 59 | 🟡 MEDIUM |
-| 60 – 100 | 🔴 HIGH |
+> **Which patients should we contact first?**
 
-The engine evaluates six measurable parameters:
+> **Why is this patient considered high risk?**
 
-1. Missed appointments
-2. Attendance history
-3. Distance from hospital
-4. Treatment duration
-5. Appointment frequency
-6. Patient age
+> **What intervention should we perform?**
 
-### Mathematical Traceability
+> **Has the follow-up intervention been completed?**
 
-Every displayed risk score is directly derived from its contributing factors.
+MedPulse addresses these challenges through a centralized, explainable workflow.
+
+---
+
+# 🎯 Vision
+
+The core vision of MedPulse is:
 
 ```text
-Total Risk Score
-=
-Missed Appointment Score
-+
-Attendance Score
-+
-Distance Score
-+
-Treatment Duration Score
-+
-Appointment Frequency Score
-+
-Age Score
+Predict
+   ↓
+Explain
+   ↓
+Prioritize
+   ↓
+Intervene
+   ↓
+Track
+   ↓
+Act Earlier
